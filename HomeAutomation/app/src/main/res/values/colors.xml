@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorActivity">#808080	</color>
+    <color name="colorActionBar">#7e7582</color>
+    <color name="colorHint">#ffffff</color>
+    <color name="colorLimit">#ffffff</color>
+    <color name="colorButton">#7158a6</color>
+    <color name="colorTextView">#ffffff</color>
+</resources>

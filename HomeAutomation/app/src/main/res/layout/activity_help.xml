@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/colorActivity"
+    tools:context="com.example.mamdouhembabi.homeautomation.Help">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35px"
+        android:textColor="@color/colorTextView"
+        android:text="1-Add our circuit to paired devices on your phone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35px"
+        android:textColor="@color/colorTextView"
+
+        android:text="2-After opening our APP ,kindly press on our circuit name to connect"
+        android:layout_marginTop="100px"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35px"
+        android:textColor="@color/colorTextView"
+
+        android:text="3-after connecting you must enter the number of devices you wish to control via our circuit"
+        android:layout_marginTop="200px"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4-enter the names of the devices you use"
+        android:layout_marginTop="350px"
+        android:textSize="35px"
+
+        android:textColor="@color/colorTextView"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5-now you can control the devices,if you want to change any thing please click on the settings button on the screen"
+        android:layout_marginTop="400px"
+        android:textSize="35px"
+        android:textColor="@color/colorTextView"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6-don't forget to disconnect before closing the APP"
+        android:layout_marginTop="550px"
+        android:textSize="35px"
+        android:textColor="@color/colorTextView"
+
+        />
+</RelativeLayout>

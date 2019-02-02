@@ -1,0 +1,58 @@
+int LED=10;//define port 11 to Led or device
+int MOTION=5;//define port 5 to motion 
+int Door=7;//define port 7 to Door
+int Auomatic=0;//define if use Auomatic system or not
+char IncomingByte;//
+String inputString="";
+/****SETUP FUNCTION******/
+void setup() {
+Serial.begin(9600); // initialization
+pinMode(LED, OUTPUT);//led or device
+pinMode(MOTION, INPUT);//motion
+pinMode(Door,OUTPUT);//Door
+}
+/*****LOOP FUNCTION******/
+void loop() { 
+  if(Auomatic==1){
+  long sensor = digitalRead(MOTION);//data from motion
+  //if statement to control the led
+  if(sensor == HIGH){
+     digitalWrite (LED, HIGH);//power on led
+   }
+   else
+   {
+      digitalWrite (LED, LOW);//power off led
+   } 
+  }
+   if(Serial.available()){
+  while(Serial.available())
+    {
+      char inChar = (char) Serial.read(); //read the input
+     
+      inputString += inChar;        //make a string of the characters coming on serial
+    }
+    Serial.println(inputString);
+    while (Serial.available() > 0)  
+    {
+      IncomingByte = Serial.read() ;
+    }
+    if(inputString=="X"){
+      Auomatic=1;
+    }
+    if(inputString=="x"){
+      Auomatic=0;
+    }
+     if(inputString == "A"){ //coming from bluetooth to Power on LEd 
+      digitalWrite(LED, HIGH); 
+          }//coming from bluetooth
+    if(inputString == "a"){// to poweroff lEd 
+      digitalWrite(LED, LOW);
+    }
+     if(inputString == "o"){// to open the door 
+      digitalWrite(Door, HIGH);
+      delay(5000);//wait 5 seconds 
+      digitalWrite(Door,LOW);//close the door again
+    }
+  }//Endcoming from bluetooth  //end serail
+     inputString = "";//set inputString  to be empty 
+}//end loop
