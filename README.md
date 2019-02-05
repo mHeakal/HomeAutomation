@@ -1,1 +1,1 @@
-# HomeAutomation
+Home Automation is an android application used to control Arduino electronic circuit with Bluetooth connection
